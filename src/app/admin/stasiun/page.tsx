@@ -4,8 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 
 export interface IStasiun {
-    id_stasiun: number
-    nama: String
+    nama : String
     kota: String
     created_at: string
     updated_at: string
@@ -41,10 +40,9 @@ export default function AdminStasiunPage () {
             <table className="table table mt-4 table- hover table-striped">
                 <thead>
                     <tr>
-                        <td>id_stasiun</td>
-                        <td>Nama</td>
+                        <td>nama</td>
                         <td>kota</td>
-                        
+                        <td>aksi</td>
                     </tr>
                 </thead>
 
@@ -52,10 +50,9 @@ export default function AdminStasiunPage () {
                     {stasiun.map((stasiun, index) => {
                         return(
                             <tr key={index}>
-                                <td>id_stasiun</td>
                                 <td>{stasiun.nama}</td>
                                 <td>{stasiun.kota}</td>
-                                <td>aksi</td>
+                                
                                 <td>
                                      <div className="d-flex gap-2">
                                         <button type="button" className="btn btn-warning">Edit</button>
