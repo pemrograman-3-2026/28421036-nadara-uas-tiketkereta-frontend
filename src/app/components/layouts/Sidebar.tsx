@@ -1,15 +1,16 @@
 'use client'
 
-import { Angry, BadgeDollarSign, Citrus, ScreenShare } from "lucide-react";
+import { Angry, BadgeDollarSign, Citrus, LayoutDashboard, ScreenShare } from "lucide-react";
 import { IMenu } from "./menu/admin.menu";
 import Link from "next/link";
 
 
 const navItems = [
-  { to: "/admin", icon: <Angry /> , label: "Kereta" },
-  { to: "/admin/genre", icon: <Citrus />, label: "Stasiun" },
-  { to: "/admin/movie", icon: <ScreenShare />, label: "Jadwal" },
-  { to: "/admin/transaksi", icon: <BadgeDollarSign />, label: "Tiket" },
+  { to: "/admin", icon: <LayoutDashboard/> , label: "dashboard" },
+  { to: "/admin/kereta", icon: <Angry /> , label: "Kereta" },
+  { to: "/admin/stasiun", icon: <Citrus />, label: "Stasiun" },
+  { to: "/admin/jadwal", icon: <ScreenShare />, label: "Jadwal" },
+  { to: "/admin/tiket", icon: <BadgeDollarSign />, label: "Tiket" },
 ];
 
 export default function Sidebar(
@@ -30,7 +31,7 @@ export default function Sidebar(
       className={`sidebar ${isOpen ? "open" : ""} ${collapsed ? "collapsed" : ""}`}
     >
       <div className="sidebar-brand">
-        {!collapsed && <span className="brand-name">Movie App</span>}
+        {!collapsed && <span className="brand-name">TIKET KERETA</span>}
         <button
           className="btn d-md-none ms-auto"
           style={{ color: "white" }}
